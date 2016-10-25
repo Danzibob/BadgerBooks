@@ -1,10 +1,14 @@
 /*set font for all elements*/
 *{
     font-family: Arial, sans-serif;
+
 }
 body{
     padding:0;
     margin: 0;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 /*Styling for slideshow*/
 #slideshow{
@@ -21,11 +25,6 @@ body{
     vertical-align: middle;
     display: inline-block;
     position: absolute;
-}
-@media screen and (min-width: 800px) {
-    #slideshow img {
-        margin-top:-140px;
-    }
 }
 #slideshow:after{
     box-shadow: inset 0 0 60px #666;
@@ -95,8 +94,9 @@ body{
 /*Menu and contents*/
 #menu{
     width:100%;
+    height: auto;
     position: absolute;
-    display:inline-block;
+    display:block;
     top:40vh;
     left:0;
 }
@@ -120,8 +120,41 @@ body{
 .mu_item p{
     display: table-cell;;
     margin: auto;
-    font-size: 28px;
+    font-size: 30px;
     vertical-align: middle;
     text-align: center;
     color: white;
+}
+
+/*Tiles and panels*/
+.tile{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    overflow: hidden;
+}
+.wrapper{
+    position: relative;
+    left:0px;
+    width:2000px;
+    height:600px;
+}
+.pane{
+    float:left;
+    width: 600px;
+    height: 600px;
+    margin:0;
+    background-color: blue;
+}
+.cover{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width: 800px) {
+    #slideshow img {
+        margin-top:-140px;
+    }
 }
