@@ -2,24 +2,30 @@
 *{
     font-family: Arial, sans-serif;
 }
+body{
+    padding:0;
+    margin: 0;
+}
 /*Styling for slideshow*/
 #slideshow{
     position: relative;
     display: block;
     width: 100%;
     height: 40vh;
-    width: 100%;
     overflow: hidden;
-    vertical-align: middle;
 }
 #slideshow img{
-    position: absolute;
-    /*display: none;*/
-    margin-top: -20vh;
     float: left;
     width: 100%;
-    height:auto;
-
+    min-height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+}
+@media screen and (min-width: 800px) {
+    #slideshow img {
+        margin-top:-140px;
+    }
 }
 #slideshow:after{
     box-shadow: inset 0 0 60px #666;
@@ -37,7 +43,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.helper{
+    display:inline-block;
+    vertical-align:middle;
+    height: 100%;
 }
 .ss_label{
     height: 26px;
@@ -52,3 +64,64 @@
     font-size: 20px;
 }
 /*Styling for title and logo*/
+/*Changing width will change both dimensions*/
+/*Change first left in title to the same value*/
+#logo{
+    width:128px;
+
+    height:auto;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 5;
+
+    /*border: red 1px solid;*/
+}
+#title{
+    left: calc(128px + 18px);
+
+    top:8px;
+    margin-top:5px;
+    position: absolute;
+    z-index: 5;
+    color: black;
+    text-shadow: 0px 0px 8px #FFF;
+    font-size: 48px;
+    font-weight: lighter;
+
+    /*border: red 1px solid;*/
+}
+
+/*Menu and contents*/
+#menu{
+    width:100%;
+    position: absolute;
+    display:inline-block;
+    top:40vh;
+    left:0;
+}
+.mu_item{
+    width:25vw;
+    height:15vw;
+    display:table;
+    margin-left:calc(25vw / 4);
+    margin-top:calc(25vw / 8);
+    margin-bottom:calc(25vw / 8);
+    margin-right:0;
+    float:left;
+    background-color: #116;
+    transform: scale(0.5);
+    transition: all 500ms;
+}
+.mu_item:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+}
+.mu_item p{
+    display: table-cell;;
+    margin: auto;
+    font-size: 28px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
