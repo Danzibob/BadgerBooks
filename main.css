@@ -1,0 +1,54 @@
+/*set font for all elements*/
+*{
+    font-family: Arial, sans-serif;
+}
+/*Styling for slideshow*/
+#slideshow{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+#slideshow img{
+    position: absolute;
+    /*display: none;*/
+    margin-top: -20vh;
+    float: left;
+    width: 100%;
+    height:auto;
+
+}
+#slideshow:after{
+    box-shadow: inset 0 0 60px #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    content: "";
+}
+.ss_slide{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.ss_label{
+    height: 26px;
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(36, 36, 36, 0.8);
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+/*Styling for title and logo*/
