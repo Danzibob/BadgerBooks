@@ -37,31 +37,74 @@
     <h1 id="title">Badger Books</h1>
     <!-- Menu -->
     <div id="menu">
-        <div class="mu_item">
+        <div class="mu_item" onclick="smoothScroll('#tile0')">
             <p>This is a link</p>
         </div>
-        <div class="mu_item">
+        <div class="mu_item" onclick="smoothScroll('#tile1')">
             <p>This is too</p>
         </div>
-        <div class="mu_item">
+        <div class="mu_item" onclick="smoothScroll('#tile2')">
             <p>And this</p>
         </div>
     </div>
 
     <!-- Tiles -->
     <div id="tilewrapper" style="margin-top:30vh">
+
         <div class="tile" id="tile0">
             <div class="wrapper" onclick="fwd('#tile0')">
+
                 <div class="pane cover" style="background-image:url(Assets/Images/Badger1.jpg)">
                 </div>
+
                 <div class="pane">
+                    <h2>Sample Title</h2>
                     <p>This is some sample text to fill this box</p>
+                    <p>Whatever HTML stuffs you cant can go here</p>
                 </div>
+
                 <div class="pane">
                     <p>This is some different sample text to make sure the page changes</p>
                 </div>
+
             </div>
         </div>
+
+
+        <div class="tile" id="tile1">
+            <div class="wrapper" onclick="fwd('#tile1')">
+
+                <div class="pane cover" style="background-image:url(Assets/Images/Badger2.jpg)">
+                </div>
+
+                <div class="pane">
+                    <p>This is some sample text to fill this box</p>
+                </div>
+
+                <div class="pane">
+                    <p>This is some different sample text to make sure the page changes</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tile" id="tile2">
+            <div class="wrapper" onclick="fwd('#tile2')">
+
+                <div class="pane cover" style="background-image:url(Assets/Images/Badger3.jpg)">
+                </div>
+
+                <div class="pane">
+                    <p>This is some sample text to fill this box</p>
+                </div>
+
+                <div class="pane">
+                    <p>This is some different sample text to make sure the page changes</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 </body>
