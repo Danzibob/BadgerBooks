@@ -156,9 +156,53 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 300ms;
+    box-shadow: inset 0 0 60px #000;
+    vertical-align: bottom;
+}
+.prompt{
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    bottom:0px;
+    left:0px;
+    margin-bottom: 2px;
+    transform: translateY(20px);
+    transition: all 300ms;
+}
+.cover:hover > .prompt{
+    transform: translateY(0px);
 }
 @media screen and (min-width: 800px) {
     #slideshow img {
         margin-top:-140px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .tile{
+        width:400px;
+        height:400px;
+    }
+    .pane{
+        width: 400px;
+        height: 400px;
+    }
+    .cover:hover:after{
+        width:400px;
+        height:400px;
+    }
+}
+@media screen and (max-width: 399px) {
+    .tile{
+        width:320px;
+        height:320px;
+    }
+    .pane{
+        width: 320px;
+        height: 320px;
+    }
+    .cover:hover:after{
+        width:320px;
+        height:320px;
     }
 }
