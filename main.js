@@ -24,19 +24,24 @@ function slideshow(div){
     fadeSwap(div,ss_pos)
 }
 // Interval of the slideshow in ms. 8000 (8s) default
-var intervalID = setInterval(slideshow, 2000,ss_div)
+var intervalID = setInterval(slideshow, 8000,ss_div)
 
 var page_width = $("#tile0 .wrapper").children().first().outerHeight()
+var lastPressed = Date.now()
 function fwd(tile){
     var wrap = $(tile+" .wrapper")
-	page_width = wrap.children().first().outerHeight()
+    page_width = wrap.children().first().outerHeight()
     var page = -parseInt(wrap.css("margin-left").slice(0,-2))/page_width
     if(page >= wrap.children(".pane").length - 1){
         wrap.animate({marginLeft: '0'}, 500);
-    } else {
+    } else if( Date.now() - lastPressed > 600 ){
+        lastPressed = Date.now()
         wrap.animate({marginLeft: '-=' + page_width.toString()}, 500);
+    } else {
+        console.log("too soon bruh")
     }
-}
+} 
+
 var resizeTimer
 $(window).resize(function(){
 	// clearTimeout(resizeTimer);
