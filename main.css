@@ -7,6 +7,15 @@ body{
     padding:0;
     margin: 0;
 }
+p{
+    font-size: 26px;
+    text-shadow: 1px 1px 1px black;
+}
+h1{
+    font-size: 50px;
+    text-shadow: 2px 2px 4px black;
+}
+h2{font-size: 40px;}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -104,7 +113,7 @@ body{
     width:25vw;
     height:15vw;
     display:table;
-    margin-left:calc(25vw / 4);
+    margin-left:0px;
     margin-top:calc(25vw / 8);
     margin-bottom:calc(25vw / 8);
     margin-right:0;
@@ -120,7 +129,7 @@ body{
 .mu_item p{
     display: table-cell;;
     margin: auto;
-    font-size: 30px;
+    font-size: 45px;
     vertical-align: middle;
     text-align: center;
     color: white;
@@ -138,7 +147,7 @@ body{
 .wrapper{
     position: relative;
     left:0px;
-    width:2000px;
+    width:20000px;
     height:600px;
 }
 .pane{
@@ -151,6 +160,8 @@ body{
     padding: 10px;
     box-sizing: border-box;
     border: 2px #DDD solid;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .cover{
     background-size: cover;
@@ -167,12 +178,62 @@ body{
     bottom:0px;
     left:0px;
     margin-bottom: 2px;
-    transform: translateY(20px);
+    transform: translateY(35px);
     transition: all 300ms;
 }
 .cover:hover > .prompt{
     transform: translateY(0px);
 }
+
+a:link {
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#DDD;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor:pointer; 
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+span:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+#fb{
+    position: fixed;
+    width:30px;
+    height: 90px;
+    border-radius: 5px 0 0 5px;
+    right:0;
+    top: calc(50vh - 45px);
+    background-color: #3b5998;
+}
+
+#fb p{
+    font-size:20px;
+    transform: rotate(90deg);
+    color:white;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+#feed{
+    width:400px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
 @media screen and (min-width: 800px) {
     #slideshow img {
         margin-top:-140px;
@@ -191,6 +252,12 @@ body{
         width:400px;
         height:400px;
     }
+    .mu_item p{
+        font-size: 30px;
+    }
+    #feed{
+        width:400px;
+    }
 }
 @media screen and (max-width: 399px) {
     .tile{
@@ -205,4 +272,9 @@ body{
         width:320px;
         height:320px;
     }
+    #feed{
+        width:320px;
+    }
 }
+
+

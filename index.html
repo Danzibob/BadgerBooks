@@ -2,115 +2,155 @@
 <meta name="viewport" content="width=device-width" />
 <html>
 <head>
-    <!-- The text shown in the tab -->
-    <title>Badger Books</title>
+	<!-- The text shown in the tab -->
+	<title>Badger Books</title>
 
-    <link rel='shortcut icon' type='image/x-icon' href='ispicefav.ico'/>
-    <link rel='stylesheet' type='text/css' href='main.css'/>
-    <script src='Assets/Libraries/jquery.min.js'></script>
-    <script src='main.js'></script>
+	<link rel='shortcut icon' type='image/x-icon' href=''/>
+	<link rel='stylesheet' type='text/css' href='main.css'/>
+	<script src='Assets/Libraries/jquery.min.js'></script>
+	<script src='main.js'></script>
 
 </head>
 
 <body>
-    <!-- The main slideshow at the top of the page -->
-    <div id="slideshow">
-        <div class="ss_slide 0">
-            <span class="helper"></span>
-            <img src="Assets/Images/companyphotobasealign.png" style="bottom:0px">
-            <div class="ss_label">Some sample text</div>
-        </div>
-        <div class="ss_slide 1">
-            <span class="helper"></span>
-            <img src="Assets/Images/Badger2.jpg">
-            <div class="ss_label">This is a label</div>
-        </div>
-        <div class="ss_slide 2">
-            <span class="helper"></span>
-            <img src="Assets/Images/Badger3.jpg">
-            <div class="ss_label">Blah Blah Blah</div>
-        </div>
-    </div>
-    <!-- Logo -->
-    <img src="Assets/Images/logo.png" id="logo">
-    <!-- Title -->
-    <h1 id="title">Badger Books</h1>
-    <!-- Menu -->
-    <div id="menu">
-        <div class="mu_item" onclick="smoothScroll('#tile0')">
-            <p>This is a link</p>
-        </div>
-        <div class="mu_item" onclick="smoothScroll('#tile1')">
-            <p>This is too</p>
-        </div>
-        <div class="mu_item" onclick="smoothScroll('#tile2')">
-            <p>And this</p>
-        </div>
-    </div>
+	<!-- The main slideshow at the top of the page -->
+	<div id="slideshow">
+		<div class="ss_slide 0">
+			<span class="helper"></span>
+			<img src="Assets/Images/companyphotobasealign.png" style="bottom:0px">
+			<div class="ss_label">Meet the team</div>
+		</div>
+		<div class="ss_slide 1">
+			<span class="helper"></span>
+			<img src="Assets/Images/Badger2.jpg">
+			<div class="ss_label">This is a label</div>
+		</div>
+		<div class="ss_slide 2">
+			<span class="helper"></span>
+			<img src="Assets/Images/Badger3.jpg">
+			<div class="ss_label">Blah Blah Blah</div>
+		</div>
+	</div>
+	<!-- Logo -->
+	<img src="Assets/Images/logo.png" id="logo">
+	<!-- Title -->
+	<h1 id="title">Badger Books</h1>
+	<!-- Menu -->
+	<div id="menu">
+		<div class="mu_item" onclick="smoothScroll('#tile0')">
+			<p>About us</p>
+		</div>
+		<div class="mu_item" onclick="smoothScroll('#tile1')">
+			<p>Our products</p>
+		</div>
+		<div class="mu_item" onclick="smoothScroll('#tile2')">
+			<p>Contact us</p>
+		</div>
+		<div class="mu_item" onclick="smoothScroll('#tile3')">
+			<p>Shop</p>
+		</div>
+	</div>
 
-    <!-- Tiles -->
-    <div id="tilewrapper" style="margin-top:21.25vw">
+	<!-- Tiles -->
+	<div id="tilewrapper" style="margin-top:21.25vw">
 
-        <!-- First box -->
-        <div class="tile" id="tile0">
-            <div class="wrapper" onclick="fwd('#tile0')">
+		<!-- First box -->
+		<div class="tile" id="tile0">
+			<div class="wrapper" onclick="fwd('#tile0')">
 
-                <!-- cover page -->
-                <div class="pane cover" style="background-image:url(Assets/Images/Badger1.jpg)">
-                    <p class="prompt">Click for more</p>
-                </div>
-                <!-- Page 2 -->
-                <div class="pane">
-                    <h2>Sample Title</h2>
-                    <p>This is some sample text to fill this box</p>
-                    <p>Whatever HTML stuffs you cant can go here</p>
-                </div>
-                <!-- Page 3 -->
-                <div class="pane">
-                    <p>This is some different sample text to make sure the page changes</p>
-                </div>
+				<!-- cover page -->
+				<div class="pane cover" style="background-image:url(Assets/Images/Badger1.jpg)">
+				<h1>About Us</h1>
+					<p class="prompt">Click for more</p>
+				</div>
+				<!-- Page 2 -->
+				<div class="pane">
+					<h2>About us</h2>
+					<p>
+						We are a company in the Halifax area made up of 10 young people. 
+						We are dedicated to making vibrant, informative and entertaining books.
+						So far we have made two children's books and have 
+						<span onclick="moreBooks()"><i>more on the way.</i></span>
+						These books can be bought from <a>our shop</a>.
+					</p>
+				</div>
+				<!-- Page 3 -->
+				<div class="pane">
+					<p>[Some photos here?]</p>
+				</div>
 
-            </div>
-        </div>
-        <!-- This pattern continues below -->
+			</div>
+		</div>
+		<!-- This pattern continues below -->
 
-        <div class="tile" id="tile1">
-            <div class="wrapper" onclick="fwd('#tile1')">
+		<div class="tile" id="tile1">
+			<div class="wrapper" onclick="fwd('#tile1')">
 
-                <div class="pane cover" style="background-image:url(Assets/Images/Badger2.jpg)">
-                    <p class="prompt">Click for more</p>
-                </div>
+				<div class="pane cover" style="background-image:url(Assets/Images/Badger2.jpg)">
+				<h1>Our Products</h1>
+					<p class="prompt">Click for more</p>
+				</div>
 
-                <div class="pane">
-                    <p>This is some sample text to fill this box</p>
-                </div>
+				<div class="pane">
+					<p>To find our shop please follow this link: [link to shop].</p>
+					<p>
+						So far we have two books, 'Terry&nbsp;the&nbsp;Pterodactyl' and 
+						'Stacey&nbsp;the&nbsp;Stegosaurus'. 
+					</p>
+					<p>Click on to find our more...</p>
+				</div>
 
-                <div class="pane">
-                    <p>This is some different sample text to make sure the page changes</p>
-                </div>
+				<div class="pane">
+					<h2>Terry the Pterodactyl</h2>
+					<p>
+						'Terry the Pterodactyl' follows the journey of a small pterodactyl 
+						who sets out to discover why all his friends are falling ill 
+						and how he can save them.
+					</p>
 
-            </div>
-        </div>
+				</div>
 
-        <div class="tile" id="tile2">
-            <div class="wrapper" onclick="fwd('#tile2')">
+				<div class="pane">
+					<h2>Stacey the Stegosaurus</h2>
+					<p>
+						Join Stacey as she learns all about the power of the sun 
+						and impresses her friends with her new gadget.
+					</p>
+					<p>
+						Learn about solar energy and make new Dino-friends along the way! 
+						Stacey and her spikes help the environment, so can you!
+					</p>
+				</div>
 
-                <div class="pane cover" style="background-image:url(Assets/Images/Badger3.jpg)">
-                    <p class="prompt">Click for more</p>
-                </div>
+			</div>
+		</div>
 
-                <div class="pane">
-                    <p>This is some sample text to fill this box</p>
-                </div>
+		<div class="tile" id="tile2">
+			<div class="wrapper" onclick="fwd('#tile2')">
 
-                <div class="pane">
-                    <p>This is some different sample text to make sure the page changes</p>
-                </div>
+				<div class="pane cover" style="background-image:url(Assets/Images/Badger3.jpg)">
+				<h1>Contact Us</h1>
+					<p class="prompt">Click for more</p>
+				</div>
 
-            </div>
-        </div>
+				<div class="pane">
+					<h2>Contact Details:</h2>
+					<p>E-mail: <a href="mailto:badgerbooksltd@gmail.com">badgerbooksltd@gmail.com</a></p>
+					<p>Tel: 07496 212040</p>
+					<p>Facebook: <a href="https://www.facebook.com/badgerbooksltd" target="_blank">facebook.com/badgerbooksltd</a></p>
+				</div>
+					
 
-    </div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="feed">
+	<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbadgerbooksltd&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=681567238666853" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
+
+	<div id="fb" onclick="smoothScroll('#feed')"><p>FB&nbsp;feed</p></div>
 
 </body>
 </html>

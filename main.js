@@ -60,3 +60,10 @@ $(window).resize(function(){
 		})
 	}, 250);
 })
+
+
+function moreBooks(){
+    smoothScroll('#tile1')
+    $("#tile1 .wrapper").css("margin-left","0px")
+    fwd('#tile1')
+}
